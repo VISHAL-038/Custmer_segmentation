@@ -22,12 +22,15 @@ The Customer Segmentation project involves using unsupervised machine learning t
   - `scikit-learn` for machine learning algorithms
 
 ## Data Collection
-The dataset used in this project contains information about customers, such as:
-- Customer ID
-- Age
-- Gender
-- Annual Income
-- Spending Score
+The dataset used in this project contains information about customer transactions, including:
+- **InvoiceNo**: Invoice number (Unique identifier for each transaction)
+- **StockCode**: Product code
+- **Description**: Product description
+- **Quantity**: Quantity of the product purchased
+- **InvoiceDate**: Date of the invoice
+- **UnitPrice**: Price per unit of the product
+- **CustomerID**: Unique identifier for each customer
+- **Country**: Country of the customer
 
 ## Data Preprocessing
 Data preprocessing steps include:
@@ -40,7 +43,7 @@ During EDA, various visualizations such as histograms, scatter plots, and box pl
 
 ## Feature Engineering
 Features are engineered to enhance the model's ability to segment customers effectively. For example:
-- Combining age and spending score to create a customer behavior feature.
+- Creating a total spending feature by multiplying `Quantity` and `UnitPrice`.
 
 ## Modeling
 Clustering algorithms like K-Means are used to segment the customers. The optimal number of clusters is determined using methods like the Elbow method and Silhouette analysis.
@@ -58,4 +61,5 @@ The Customer Segmentation project provides valuable insights into customer behav
 1. Clone this repository.
 2. Install the required libraries using `pip install -r requirements.txt`.
 3. Run the `customer_segmentation.py` script to perform the segmentation and visualize the results.
+
 
